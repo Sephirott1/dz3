@@ -5,22 +5,17 @@
 int main() {
     setlocale(LC_ALL, "ru");
 
-    int birth_day, birth_month, birth_year;
-    int current_day, current_month, current_year;
+    int a;
+    int b;
     int age;
 
-    printf("Введите дату рождения (дд мм гггг): ");
-    scanf("%d %d %d", &birth_day, &birth_month, &birth_year);
+    printf("Введите год вашего рождения: ");
+    scanf("%d", &a);
 
-    printf("Введите текущую дату (дд мм гггг): ");
-    scanf("%d %d %d", &current_day, &current_month, &current_year);
+    printf("Введите текущий год: ");
+    scanf("%d", &b);
 
-    age = current_year - birth_year;
-
-    if (current_month < birth_month || (current_month == birth_month && current_day < birth_day)) 
-    {
-        age--;
-    }
+    age = b - a;
 
     printf("Возраст: %d лет\n", age);
 
